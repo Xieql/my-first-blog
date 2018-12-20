@@ -2,12 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>leo🐲的博客主页</title>
+    <title>leo🦁️的主页</title>
 
 </head>
-    <p>看这儿</p>
+    <p>🌞</p>
     <p>成功了！😄</p>
 <body>
+    <div>
+        <h1><a href="">主页</a></h1>
+    </div>
+    <div>
+        <p>published: 2018 12 19</p>
+        <h2><a href="">第一篇文章</a></h2>
+        <p>新华社消息，据埃塞俄比亚广播电台报道，埃塞俄比亚西北部的本尚古勒-古马兹州19日发生一起地雷爆炸事件，造成8人死亡、3人受重伤。
+本尚古勒-古马兹州政府官员说，一辆载有11名平民的小型公共汽车当天在该州行驶途中触发埋藏在公路路面下的地雷，瞬间酿成人间悲剧。
+目前，尚没有任何组织宣称制造了这起爆炸事件。埃塞俄比亚安全部队正在就事件展开调查。
+本尚古勒-古马兹州与奥罗米亚州接壤，两州交界地带的民众因土地等问题存在矛盾。今年9月，两州民众冲突曾导致5人死亡，埃塞俄比亚联邦和地方安全部队出面干预后，
+            冲突才得以控制。</p>
+    </div>
+    {%  for post in posts %}
+        <div>
+            <p>published:{{ post.publish_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+
+
 
 </body>
 </html>
